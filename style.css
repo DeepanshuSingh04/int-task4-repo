@@ -1,0 +1,168 @@
+/* ============ GLOBAL ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #eef1f6;
+    color: #1f2937;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+    width: 100%;
+    background: rgba(17, 24, 39, 0.9);
+    color: white;
+    backdrop-filter: blur(8px);
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.nav-links li a:hover {
+    opacity: 0.7;
+}
+
+/* Mobile Hamburger */
+.hamburger {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+/* ============ HERO ============ */
+.hero {
+    margin: 40px 0;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    opacity: 0.9;
+    font-size: 17px;
+}
+
+/* ============ CARDS & LAYOUT ============ */
+
+.layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.subtext {
+    opacity: 0.65;
+    margin-bottom: 12px;
+}
+
+.mini-card {
+    background: #f3f4f6;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+/* ============ RESPONSIVE (MOBILE) ============ */
+
+@media (max-width: 850px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(17, 24, 39, 0.95);
+        padding: 20px 0;
+        display: none;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
